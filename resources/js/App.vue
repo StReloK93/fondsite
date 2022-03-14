@@ -1,12 +1,10 @@
 <template>
-	<Header/>
-   <section class="h-full overflow-hidden">
-		<router-view v-slot="{ Component }">
-			<transition name="fade" mode="out-in">
-				<component class="h-full" :is="Component" />
-			</transition>
-		</router-view>
-   </section>
+<Header/>
+<section class="h-full overflow-hidden">
+	<router-view v-slot="{ Component }">
+		<component class="h-full" :is="Component" />
+	</router-view>
+</section>
 </template>
 <script setup>
 

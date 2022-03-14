@@ -31886,6 +31886,21 @@ video {
   align-items: center;
 }
 
+.bg-image-1{
+  background-image: url('/images/1.jpg');
+  background-repeat: no-repeat;
+}
+
+.bg-image-2{
+  background-image: url('/images/2.jpg');
+  background-repeat: no-repeat;
+}
+
+.bg-image-3{
+  background-image: url('/images/3.jpg');
+  background-repeat: no-repeat;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
