@@ -1,8 +1,8 @@
 <template>
 <Header/>
-<section class="h-full overflow-hidden">
+<section class="h-full">
 	<router-view v-slot="{ Component }">
-		<component class="h-full" :is="Component" />
+		<component class="h-full pt-24 px-16" :is="Component" />
 	</router-view>
 </section>
 </template>

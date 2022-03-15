@@ -8,15 +8,16 @@
 		:effect="'creative'"
 		:mousewheel="true"
 		:speed="1000"
+		@transitionEnd="eventEnd"
 	>
-		<swiper-slide class="bg-image-1 bg-cover pt-72 px-16 text-white" v-slot="{ isActive }">
-			<main :class="{'max-h-40' : isActive}" class="overflow-hidden transition origin-left origin-top-left max-h-0">
+		<swiper-slide class="bg-image-1 bg-cover pt-72 px-16 text-white">
+			<main :class="{'scale-y-100' : sliderIndex == 0}" class="overflow-hidden origin-top transform custom-transition scale-y-0">
 				<h3 class="text-5xl uppercase text-yellow-custom font-bold">
-					Bizning yutuqlarimiz
+					Biz haqimizda
 				</h3>
-				<button class="px-8 shadow py-3 mt-10 bg-blue-500 font-medium hover:bg-blue-600">
+				<router-link to="/about" class="inline-block px-8 shadow py-3 mt-10 bg-blue-500 font-medium hover:bg-blue-600">
 					Batafsil
-				</button>
+				</router-link>
 			</main>
 		</swiper-slide>
 		<swiper-slide class="bg-image-2 bg-cover flex-center">Slide 2</swiper-slide>
@@ -25,10 +26,14 @@
 </template>
 <script setup>
 import { ref } from "vue"
-import { Swiper, SwiperSlide, useSwiper } from "swiper/vue"
+import { Swiper, SwiperSlide } from "swiper/vue"
 import { Mousewheel } from "swiper"
-const swip = useSwiper()
-console.log(swip)
 
+const sliderIndex = ref(null)
+
+function eventEnd(swiper){
+	console.log(swiper.realIndex);
+	sliderIndex.value = swiper.realIndex
+}
 import "swiper/css"
 </script>

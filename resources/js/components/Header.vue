@@ -1,8 +1,11 @@
 <template>
     <RightPanel ref="Panel" :class="{'translate-x-clear': menu}"/>
     <section class="fixed top-0 left-0 w-full px-16 py-6 flex justify-between items-center text-gray-200 z-50">
-        <router-link to="/" class="font-bold text-white">
-            Fond Logo
+        <router-link to="/" class="font-bold  flex items-center">
+            <img src="/logo.png" class="w-10"> 
+            <span class="text-gray-200 ml-3 text-xl">
+                NKMK Jamg'armasi DM
+            </span>
         </router-link>
         <main class="flex items-center">
             <button :class="{'mr-60': menu}" class="text-2xl cursor-pointer mr-10 custom-transition">

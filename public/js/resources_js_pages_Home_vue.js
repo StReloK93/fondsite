@@ -23,14 +23,19 @@ __webpack_require__.r(__webpack_exports__);
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
-    var swip = (0,swiper_vue__WEBPACK_IMPORTED_MODULE_1__.useSwiper)();
-    console.log(swip);
+    var sliderIndex = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(null);
+
+    function eventEnd(swiper) {
+      console.log(swiper.realIndex);
+      sliderIndex.value = swiper.realIndex;
+    }
+
     var __returned__ = {
-      swip: swip,
+      sliderIndex: sliderIndex,
+      eventEnd: eventEnd,
       ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref,
       Swiper: swiper_vue__WEBPACK_IMPORTED_MODULE_1__.Swiper,
       SwiperSlide: swiper_vue__WEBPACK_IMPORTED_MODULE_1__.SwiperSlide,
-      useSwiper: swiper_vue__WEBPACK_IMPORTED_MODULE_1__.useSwiper,
       Mousewheel: swiper__WEBPACK_IMPORTED_MODULE_2__.Mousewheel
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
@@ -58,23 +63,19 @@ __webpack_require__.r(__webpack_exports__);
 
 var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h3", {
   "class": "text-5xl uppercase text-yellow-custom font-bold"
-}, " Bizning yutuqlarimiz ", -1
+}, " Biz haqimizda ", -1
 /* HOISTED */
 );
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-  "class": "px-8 shadow py-3 mt-10 bg-blue-500 font-medium hover:bg-blue-600"
-}, " Batafsil ", -1
-/* HOISTED */
-);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Batafsil ");
 
-var _hoisted_3 = [_hoisted_1, _hoisted_2];
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Slide 2");
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Slide 2");
-
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Slide 3");
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Slide 3");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Swiper"], {
     modules: [$setup.Mousewheel],
     "slides-per-view": 1,
@@ -83,19 +84,29 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     loop: true,
     effect: 'creative',
     mousewheel: true,
-    speed: 1000
+    speed: 1000,
+    onTransitionEnd: $setup.eventEnd
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["SwiperSlide"], {
         "class": "bg-image-1 bg-cover pt-72 px-16 text-white"
       }, {
-        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function (_ref) {
-          var isActive = _ref.isActive;
+        "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
           return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", {
             "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
-              'max-h-40': isActive
-            }, "overflow-hidden transition origin-left origin-top-left max-h-0"])
-          }, _hoisted_3, 2
+              'scale-y-100': $setup.sliderIndex == 0
+            }, "overflow-hidden origin-top transform custom-transition scale-y-0"])
+          }, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+            to: "/about",
+            "class": "inline-block px-8 shadow py-3 mt-10 bg-blue-500 font-medium hover:bg-blue-600"
+          }, {
+            "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+              return [_hoisted_2];
+            }),
+            _: 1
+            /* STABLE */
+
+          })], 2
           /* CLASS */
           )];
         }),
@@ -106,7 +117,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         "class": "bg-image-2 bg-cover flex-center"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_4];
+          return [_hoisted_3];
         }),
         _: 1
         /* STABLE */
@@ -115,7 +126,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         "class": "bg-image-3 bg-cover flex-center"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_5];
+          return [_hoisted_4];
         }),
         _: 1
         /* STABLE */

@@ -19644,7 +19644,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "h-full overflow-hidden"
+  "class": "h-full"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-view");
@@ -19653,7 +19653,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function (_ref) {
       var Component = _ref.Component;
       return [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)(Component), {
-        "class": "h-full"
+        "class": "h-full pt-24 px-16"
       }))];
     }),
     _: 1
@@ -19683,24 +19683,35 @@ var _hoisted_1 = {
   "class": "fixed top-0 left-0 w-full px-16 py-6 flex justify-between items-center text-gray-200 z-50"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Fond Logo ");
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  src: "/logo.png",
+  "class": "w-10"
+}, null, -1
+/* HOISTED */
+);
 
-var _hoisted_3 = {
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "text-gray-200 ml-3 text-xl"
+}, " NKMK Jamg'armasi DM ", -1
+/* HOISTED */
+);
+
+var _hoisted_4 = {
   "class": "flex items-center"
 };
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
   "class": "fal fa-search"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_5 = [_hoisted_4];
-var _hoisted_6 = {
+var _hoisted_6 = [_hoisted_5];
+var _hoisted_7 = {
   key: 0,
   "class": "fal fa-bars"
 };
-var _hoisted_7 = {
+var _hoisted_8 = {
   key: 1,
   "class": "fal fa-times"
 };
@@ -19716,19 +19727,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["class"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/",
-    "class": "font-bold text-white"
+    "class": "font-bold flex items-center"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_2];
+      return [_hoisted_2, _hoisted_3];
     }),
     _: 1
     /* STABLE */
 
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([{
       'mr-60': $setup.menu
     }, "text-2xl cursor-pointer mr-10 custom-transition"])
-  }, _hoisted_5, 2
+  }, _hoisted_6, 2
   /* CLASS */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
     onClick: $setup.menuOpen,
@@ -19740,7 +19751,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     mode: "out-in"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [$setup.menu == false ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("i", _hoisted_6)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("i", _hoisted_7))];
+      return [$setup.menu == false ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("i", _hoisted_7)) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("i", _hoisted_8))];
     }),
     _: 1
     /* STABLE */
@@ -19768,28 +19779,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "fixed top-0 right-0 w-96 z-50 h-full text-white transform custom-transition translate-x-full bg-gray-800 shadow bg-opacity-90"
+  "class": "fixed top-0 right-0 w-96 z-50 h-full text-white transform custom-transition translate-x-full bg-gray-800 shadow bg-opacity-90 pb-6"
 };
 var _hoisted_2 = {
-  "class": "pt-20 px-7 mt-2"
+  "class": "pt-20 px-7 mt-2 flex flex-col justify-between h-full overflow-y-auto",
+  id: "element"
 };
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Link 1 ");
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Bosh sahifa ");
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Link 2 ");
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Biz haqimizda ");
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Link 3 ");
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Yangiliklar ");
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Link 4 ");
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Xizmatlar ");
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Link 5 ");
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Aloqalar ");
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Link 6 ");
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Matbuot xizmati ");
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Axborot xizmalari ");
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<aside class=\"text-gray-300 mt-20\"><div class=\"flex items-start mb-3\"><i class=\"fas fa-home text-2xl pt-2\"></i><p class=\"ml-3\"> O&#39;zbekiston Respublikasi, Navoiy viloyati, Navoiy sh., Navoiy ko&#39;chasi 21-uy </p></div><div class=\"flex items-start mb-3\"><i class=\"fas fa-phone text-2xl pt-2\"></i><p class=\"ml-3\"> +(99879) 227-29-16 <br> +(99879) 227-29-18 </p></div><div class=\"flex items-start mb-3\"><i class=\"fas fa-fax text-2xl pt-2\"></i><p class=\"ml-3\"> +(99879) 227-82-13 </p></div><div class=\"flex items-start mb-3\"><i class=\"fal fa-envelope text-2xl pt-2\"></i><p class=\"ml-4\"> info@fondnkmk.uz </p></div><div class=\"mt-10 flex flex-wrap\"><a href=\"http://www.gov.uz/uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img src=\"/images/gov.gif\"></a><a href=\"http://www.uzinfocom.uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img src=\"/images/dc.png\"></a><a href=\"http://www.lex.uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img src=\"/images/lexuz.gif\"></a><a href=\"http://www.rudmet.ru/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img src=\"/images/rudmet2.gif\"></a><a href=\"http://www.cert.uz/uzcertified/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img src=\"/images/uz-certified.gif\"></a><a href=\"https://www.ngmk.uz/vestnik/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img src=\"/images/gvuz_rus.gif\"></a><a href=\"http://my.gov.uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img src=\"/images/mini_baner_2.png\"></a><a href=\"http://gis.uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img src=\"/images/banner_gis_uz.png\"></a></div></aside>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("main", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("aside", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/",
     "class": "w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md mb-4"
   }, {
@@ -19800,7 +19816,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* STABLE */
 
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: "/",
+    to: "/about",
     "class": "w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md mb-4"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -19849,7 +19865,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })])]);
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/",
+    "class": "w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md mb-4"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_9];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), _hoisted_10])]);
 }
 
 /***/ }),
@@ -20229,7 +20255,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".menu-enter-from{\r\n    transform: rotate(60deg);\r\n    opacity: 0.3;\n}\n.menu-enter-active {\r\n    transition: .2s ease;\n}\n.menu-leave-to {\r\n    transform: rotate(60deg);\n}\n.menu-leave-active {\r\n    opacity: 0.3;\r\n    transition: .2s ease;\n}\n.height-enter-from{\r\n    max-height: 0px;\r\n    opacity: 0.3;\n}\n.height-enter-active {\r\n    transition: 1s ease;\n}\n.height-leave-to {\r\n    max-height: 500px;\n}\n.height-leave-active {\r\n    opacity: 0.3;\r\n    max-height: 0px;\r\n    transition: 1s ease;\n}\n.translate-x-clear{\r\n    transform: translateX(0)!important;\n}\n.custom-transition{\r\n    transition: .5s;\n}\n.text-yellow-custom{\r\n    color: #ffc218;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".menu-enter-from{\r\n    transform: rotate(60deg);\r\n    opacity: 0.3;\n}\n.menu-enter-active {\r\n    transition: .2s ease;\n}\n.menu-leave-to {\r\n    transform: rotate(60deg);\n}\n.menu-leave-active {\r\n    opacity: 0.3;\r\n    transition: .2s ease;\n}\n.height-enter-from{\r\n    max-height: 0px;\r\n    opacity: 0.3;\n}\n.height-enter-active {\r\n    transition: 1s ease;\n}\n.height-leave-to {\r\n    max-height: 500px;\n}\n.height-leave-active {\r\n    opacity: 0.3;\r\n    max-height: 0px;\r\n    transition: 1s ease;\n}\n.translate-x-clear{\r\n    transform: translateX(0)!important;\n}\n.custom-transition{\r\n    transition: .5s;\n}\n.text-yellow-custom{\r\n    color: #ffc218;\n}\n::-webkit-scrollbar {\r\nwidth: 5px;\n}\n::-webkit-scrollbar-track {\r\nbackground-color: #f9f9fd;\n}\n::-webkit-scrollbar-thumb {\r\nbackground-color: #f2bf93\n}\nbody{\r\n    font-family: 'Font Awesome 5 Pro'!important;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
