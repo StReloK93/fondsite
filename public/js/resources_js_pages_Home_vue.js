@@ -26,7 +26,6 @@ __webpack_require__.r(__webpack_exports__);
     var sliderIndex = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(null);
 
     function eventEnd(swiper) {
-      console.log(swiper.realIndex);
       sliderIndex.value = swiper.realIndex;
     }
 

@@ -10,7 +10,7 @@
         "production": "mix --production"
     },
     "dependencies": {
-        "@tinymce/tinymce-vue": "^4.0.7",
+        "@editorjs/editorjs": "^2.23.2",
         "laravel-mix": "^6.0.39",
         "swiper": "^8.0.7",
         "vue-class-component": "^8.0.0-rc.1",

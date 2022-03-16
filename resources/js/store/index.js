@@ -7,7 +7,8 @@ export default createStore({
             grid: null,
             gridData: [],
             context: false,
-            activeContext: null
+            activeContext: null,
+            scroll: false
         }
     },
     mutations: {
@@ -33,6 +34,7 @@ export default createStore({
         },
         async getUser({ commit }) {
             await axios.get('user').then((res) => {
+                console.log(res);
                 commit('setUser', res.data);
             }).catch(() => { console.clear() })
         },

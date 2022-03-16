@@ -8,7 +8,6 @@ import App from './App.vue'
 import router from './router';
 import store from './store';
 
-
 window.store = store
 window.router = router
 

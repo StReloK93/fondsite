@@ -9,11 +9,11 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
 	if (store.state.user) {
 		if (to.matched.some(route => route.meta.guard === 'guest')) next({ name: 'home' })
-		else next();
+		else next()
 
 	} else {
 		if (to.matched.some(route => route.meta.guard === 'auth')) next({ name: 'login' })
-		else next();
+		else next()
 	}
 })
 

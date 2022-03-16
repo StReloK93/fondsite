@@ -9,6 +9,6 @@
     <link rel="stylesheet" href="/awesome/css/all.min.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 </head>
-<body id="app" class="h-full w-full bg-white"></body>
+<body id="app" class="h-full w-full bg-gray-100"></body>
 <script src="{{mix('js/app.js')}}"></script>
 </html>

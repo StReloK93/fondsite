@@ -32,7 +32,6 @@ import { Mousewheel } from "swiper"
 const sliderIndex = ref(null)
 
 function eventEnd(swiper){
-	console.log(swiper.realIndex);
 	sliderIndex.value = swiper.realIndex
 }
 import "swiper/css"

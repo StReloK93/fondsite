@@ -1,6 +1,6 @@
 <template>
-   <section class="fixed top-0 right-0 w-96 z-50 h-full text-white transform custom-transition translate-x-full bg-gray-800 shadow bg-opacity-90 pb-6">
-      <header class="pt-20 px-7 mt-2 flex flex-col justify-between h-full overflow-y-auto" id="element">
+   <section class="w-0 overflow-hidden z-50 h-screen text-white transform custom-transition bg-gray-800 shadow bg-opacity-90 pb-6">
+      <header class="pt-7 px-7 flex flex-col justify-between h-full overflow-y-auto w-96" id="element">
          <aside>
             <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
                Bosh sahifa
@@ -54,28 +54,28 @@
 
             <div class="mt-10 flex flex-wrap">
                <a href="http://www.gov.uz/uz/" target="_blank" class="w-1/3 mb-4">
-                  <img src="/images/gov.gif">
+                  <img class="w-24" src="/images/gov.gif">
                </a>
                <a href="http://www.uzinfocom.uz/" target="_blank" class="w-1/3 mb-4">
-                  <img src="/images/dc.png">
+                  <img class="w-24" src="/images/dc.png">
                </a>
                <a href="http://www.lex.uz/" target="_blank" class="w-1/3 mb-4">
-                  <img src="/images/lexuz.gif">
+                  <img class="w-24" src="/images/lexuz.gif">
                </a>
                <a href="http://www.rudmet.ru/" target="_blank" class="w-1/3 mb-4">
-                  <img src="/images/rudmet2.gif">
+                  <img class="w-24" src="/images/rudmet2.gif">
                </a>
                <a href="http://www.cert.uz/uzcertified/" target="_blank" class="w-1/3 mb-4">
-                  <img src="/images/uz-certified.gif">
+                  <img class="w-24" src="/images/uz-certified.gif">
                </a>
                <a href="https://www.ngmk.uz/vestnik/" target="_blank" class="w-1/3 mb-4">
-                  <img src="/images/gvuz_rus.gif">
+                  <img class="w-24" src="/images/gvuz_rus.gif">
                </a>
                <a href="http://my.gov.uz/" target="_blank" class="w-1/3 mb-4">
-                  <img src="/images/mini_baner_2.png">
+                  <img class="w-24" src="/images/mini_baner_2.png">
                </a>
                <a href="http://gis.uz/" target="_blank" class="w-1/3 mb-4">
-                  <img src="/images/banner_gis_uz.png">
+                  <img class="w-24" src="/images/banner_gis_uz.png">
                </a>
             </div>
          </aside>
