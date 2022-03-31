@@ -26,13 +26,18 @@
     </main>
 </template>
 <script setup>
-import { ref } from 'vue'
-
+import { ref, watch  } from 'vue'
+import { useRoute } from 'vue-router';
+const route = useRoute()
 const menu = ref(false)
 const Panel = ref(null)
 function menuOpen(){
     menu.value = !menu.value
     Panel.value.MenuAnimate()
 }
+
+watch(() => route.name , () =>{
+    menu.value = false
+})
 import RightPanel from './RightPanel.vue'
 </script>

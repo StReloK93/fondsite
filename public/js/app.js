@@ -19599,13 +19599,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm-bundler.js");
 /* harmony import */ var _RightPanel_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./RightPanel.vue */ "./resources/js/components/RightPanel.vue");
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
+    var route = (0,vue_router__WEBPACK_IMPORTED_MODULE_2__.useRoute)();
     var menu = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(false);
     var Panel = (0,vue__WEBPACK_IMPORTED_MODULE_0__.ref)(null);
 
@@ -19614,11 +19617,19 @@ __webpack_require__.r(__webpack_exports__);
       Panel.value.MenuAnimate();
     }
 
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.watch)(function () {
+      return route.name;
+    }, function () {
+      menu.value = false;
+    });
     var __returned__ = {
+      route: route,
       menu: menu,
       Panel: Panel,
       menuOpen: menuOpen,
       ref: vue__WEBPACK_IMPORTED_MODULE_0__.ref,
+      watch: vue__WEBPACK_IMPORTED_MODULE_0__.watch,
+      useRoute: vue_router__WEBPACK_IMPORTED_MODULE_2__.useRoute,
       RightPanel: _RightPanel_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
