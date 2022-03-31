@@ -3,7 +3,7 @@
 		<main class="flex items-center justify-center h-full fixed w-full top-0 left-0 z-50">
 			<form class="w-1/2 shadow-2xl flex" @submit.prevent="$store.dispatch('login', form)">
 				<section class="w-1/2 loginback"></section>
-				<section class="p-8 w-1/2 bg-white">
+				<section class="py-16 px-8 w-1/2 bg-white">
 					<h3 class="text-gray-900 text-2xl text-center">Accountga kirish</h3>
 					<div>
 						<label for="number" class="text-gray-400 text-xs">Telefon raqamingizni kiriting</label>

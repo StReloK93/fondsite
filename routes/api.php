@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\PagesController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,10 +19,13 @@ use App\Http\Controllers\ImageController;
 
 Route::post('/login', [UserController::class, 'login']);
 Route::post('/uploadimage', [ImageController::class, 'upload']);
-
+Route::get('/pages/{page}', [PagesController::class, 'page']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', [UserController::class, 'getUser']);
     Route::get('/logout', [UserController::class, 'logout']);
+
+    
+    Route::post('/pages/{page}', [PagesController::class, 'pageEdit']);
 });
 

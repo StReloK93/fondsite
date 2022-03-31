@@ -2,9 +2,6 @@
    <section class="w-0 overflow-hidden z-50 h-screen text-white transform custom-transition bg-gray-800 shadow bg-opacity-90 pb-6">
       <header class="pt-7 px-7 flex flex-col justify-between h-full overflow-y-auto w-96" id="element">
          <aside>
-            <router-link v-if="$store.state.user" to="/admin" class="w-full p-4 bg-green-900 bg-opacity-90 block shadow-md  mb-4">
-               Admin Panel
-            </router-link>
             <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
                Bosh sahifa
             </router-link>
@@ -12,19 +9,19 @@
                Biz haqimizda
             </router-link>
             <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
-               Yangiliklar
-            </router-link>
-            <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
                Xizmatlar
             </router-link>
             <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
-               Aloqalar
+               Axborot xizmatlari
             </router-link>
             <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
                Matbuot xizmati
             </router-link>
             <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
-               Axborot xizmalari
+               Yangiliklar
+            </router-link>
+            <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
+               Aloqalar
             </router-link>
          </aside>
          <aside class="text-gray-300 mt-20">

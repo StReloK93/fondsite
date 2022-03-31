@@ -9,15 +9,15 @@
         </main>
         <main class="container mx-auto mt-16 flex">
             <div class="w-3/4 pr-3">
-                <aside class="shadow-sm p-4 bg-white">
-                    <div class="flex justify-between mb-2">
+                <aside class="shadow-sm px-4 pt-2 bg-white">
+                    <!-- <div class="flex justify-between mb-2">
                         <span class="bg-gray-600 text-gray-200 px-2 py-1 shadow">
                            Yaratildi  20.11.2022 <i class="fal fa-calendar-alt"></i>
                         </span>
                         <span class="bg-gray-600 text-gray-200 px-2 py-1 shadow">
                            Yangilandi 20.11.2022 <i class="fal fa-calendar-alt"></i>
                         </span>
-                    </div>
+                    </div> -->
                     <div id="editor">
 
                     </div>
@@ -67,21 +67,26 @@
     </section>
 </template>
 <script setup>
-import {ref, onMounted} from 'vue'
+import {onUnmounted} from 'vue'
 import EditorJS from '@editorjs/editorjs';
 import List from '@editorjs/list'; 
 import Header from '@editorjs/header'
-import Link from '@editorjs/link'
 import ImageTool from '@editorjs/image'
 import Quote  from '@editorjs/quote'
 import Delimiter  from '@editorjs/delimiter'
+var pageInfo = null
+var editor = null
+async function getData(){
+    pageInfo = await axios.get('/pages/about')
+}
 
 
-onMounted(()=>{
-    const editor = new EditorJS({
+getData().then(() => {
+    console.log(pageInfo.data.description);
+    editor = new EditorJS({
         holder: 'editor',
-        // readOnly: true,
-        // data: "",
+        readOnly: true,
+        data: JSON.parse(pageInfo.data.description),
         tools: {
             list: {
                 class: List,
@@ -91,7 +96,6 @@ onMounted(()=>{
                 }
             },
             header: Header,
-            Link,
             delimiter: Delimiter,
             image: {
                 class: ImageTool,
@@ -105,10 +109,15 @@ onMounted(()=>{
         },
         onChange: (api, event) => {
             editor.save().then((outputData) => {
-                console.log('Article data: ', outputData)
+                axios.post('/pages/about', {description: outputData}).then((res) => {
+                    console.log(res.data);
+                })
             })
         }
     });
+})
 
+onUnmounted(() => {
+    editor.destroy();
 })
 </script>

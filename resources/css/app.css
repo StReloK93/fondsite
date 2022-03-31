@@ -114,3 +114,19 @@ h6.ce-header{
 .image-tool__caption{
     display: none!important;
 }
+
+
+
+@layer components {
+    .image-tool__image-picture{
+        @apply w-full object-cover;
+        height: 600px;
+    }
+    .image-tool--withBackground .image-tool__image{
+        background: transparent!important;
+        padding: 0!important;
+    }
+    .image-tool--withBackground .image-tool__image-picture{
+        margin: 0!important;
+    }
+}

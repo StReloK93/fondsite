@@ -609,6 +609,22 @@ video {
   }
 }
 
+.image-tool__image-picture{
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 600px;
+}
+
+.image-tool--withBackground .image-tool__image{
+  background: transparent!important;
+  padding: 0!important;
+}
+
+.image-tool--withBackground .image-tool__image-picture{
+  margin: 0!important;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

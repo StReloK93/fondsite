@@ -30,19 +30,35 @@ export default [
 		path: '/admin',
 		component: () => import('../pages/admin/index.vue'),
 		name: 'admin',
-      meta: {
+      	meta: {
 			guard: 'auth',
 			header: false,
 			footer: false
 		},
 		children: [
 			{
-			  path: '',
-			  component: () => import('../pages/admin/main.vue'),
+				path: '',
+				component: () => import('../pages/admin/news.vue'),
 			},
 			{
-			  path: 'news',
-			  component: () => import('../pages/admin/News.vue'),
+				path: 'services',
+				component: () => import('../pages/admin/services.vue'),
+			},
+			{
+				path: 'about',
+				component: () => import('../pages/admin/about.vue'),
+			},
+			{
+				path: 'printed',
+				component: () => import('../pages/admin/printed.vue'),
+			},
+			{
+				path: 'information',
+				component: () => import('../pages/admin/information.vue'),
+			},
+			{
+				path: 'contacts',
+				component: () => import('../pages/admin/contacts.vue'),
 			},
 		 ],
 	},
@@ -52,8 +68,8 @@ export default [
 		name: 'login',
 		meta: {
 			guard: 'guest',
-			header: true,
-			footer: true
+			header: false,
+			footer: false
 		}
 	},
 	{

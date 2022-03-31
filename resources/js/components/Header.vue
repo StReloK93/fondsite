@@ -8,6 +8,9 @@
                 </span>
             </router-link>
             <main class="flex items-center">
+                <router-link v-if="$store.state.user" to="/admin" class="w-full px-4 mr-3 bg-opacity-90 block text-green-600">
+                Admin Panel <i class="fal fa-user-cog ml-3"></i>
+                </router-link>
                 <button @click="$store.dispatch('logout')" class="text-2xl cursor-pointer mr-10">
                     <i class="fal fa-search"></i>
                 </button>

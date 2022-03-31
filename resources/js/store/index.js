@@ -22,7 +22,7 @@ export default createStore({
                 localStorage.setItem('token', `${result.data.type} ${result.data.token}`) // local
                 state.logined = null
                 await dispatch('getUser')
-                router.push({ name: 'admin' })
+                router.push({ path: '/admin' })
             }
         },
         async register({ dispatch }, props) {
