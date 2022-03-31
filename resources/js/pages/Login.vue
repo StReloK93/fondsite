@@ -1,6 +1,6 @@
 <template>
 	<section class="flex flex-col h-full">
-		<main class="flex-grow flex items-center justify-center">
+		<main class="flex items-center justify-center h-full fixed w-full top-0 left-0 z-50">
 			<form class="w-1/2 shadow-2xl flex" @submit.prevent="$store.dispatch('login', form)">
 				<section class="w-1/2 loginback"></section>
 				<section class="p-8 w-1/2 bg-white">

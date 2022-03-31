@@ -9,6 +9,7 @@
 		:mousewheel="true"
 		:speed="1000"
 		@transitionEnd="eventEnd"
+		class="h-screen"
 	>
 		<swiper-slide class="bg-image-1 bg-cover pt-72 px-16 text-white">
 			<main :class="{'scale-y-100' : sliderIndex == 0}" class="overflow-hidden origin-top transform custom-transition scale-y-0">

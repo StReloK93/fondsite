@@ -19540,12 +19540,8 @@ __webpack_require__.r(__webpack_exports__);
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
     expose();
-    addEventListener('scroll', function (event) {
-      if (window.scrollY > 100) {
-        store.state.scroll = true;
-      } else {
-        store.state.scroll = false;
-      }
+    addEventListener('scroll', function () {
+      if (window.scrollY > 100) store.state.scroll = true;else store.state.scroll = false;
     });
     var __returned__ = {
       Header: _components_Header_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
@@ -19686,24 +19682,10 @@ __webpack_require__.r(__webpack_exports__);
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-view");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["Header"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", {
-    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)({
-      'h-full': _ctx.$route.name == 'home'
-    })
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view, null, {
-    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function (_ref) {
-      var Component = _ref.Component;
-      return [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)((0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveDynamicComponent)(Component), {
-        "class": "h-full pt-24 px-16"
-      }))];
-    }),
-    _: 1
-    /* STABLE */
-
-  })], 2
-  /* CLASS */
-  ), _ctx.$route.name != 'home' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Footer"], {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_ctx.$route.meta.header ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Header"], {
     key: 0
+  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view), _ctx.$route.meta.footer ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)($setup["Footer"], {
+    key: 1
   })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)], 64
   /* STABLE_FRAGMENT */
   );
@@ -19856,28 +19838,31 @@ var _hoisted_2 = {
   id: "element"
 };
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Bosh sahifa ");
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Admin Panel ");
 
-var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Biz haqimizda ");
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Bosh sahifa ");
 
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Yangiliklar ");
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Biz haqimizda ");
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Xizmatlar ");
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Yangiliklar ");
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Aloqalar ");
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Xizmatlar ");
 
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Matbuot xizmati ");
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Aloqalar ");
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Axborot xizmalari ");
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Matbuot xizmati ");
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<aside class=\"text-gray-300 mt-20\"><div class=\"flex items-start mb-3\"><i class=\"fas fa-home text-2xl pt-2\"></i><p class=\"ml-3\"> O&#39;zbekiston Respublikasi, Navoiy viloyati, Navoiy sh., Navoiy ko&#39;chasi 21-uy </p></div><div class=\"flex items-start mb-3\"><i class=\"fas fa-phone text-2xl pt-2\"></i><p class=\"ml-3\"> +(99879) 227-29-16 <br> +(99879) 227-29-18 </p></div><div class=\"flex items-start mb-3\"><i class=\"fas fa-fax text-2xl pt-2\"></i><p class=\"ml-3\"> +(99879) 227-82-13 </p></div><div class=\"flex items-start mb-3\"><i class=\"fal fa-envelope text-2xl pt-2\"></i><p class=\"ml-4\"> info@fondnkmk.uz </p></div><div class=\"mt-10 flex flex-wrap\"><a href=\"http://www.gov.uz/uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/gov.gif\"></a><a href=\"http://www.uzinfocom.uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/dc.png\"></a><a href=\"http://www.lex.uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/lexuz.gif\"></a><a href=\"http://www.rudmet.ru/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/rudmet2.gif\"></a><a href=\"http://www.cert.uz/uzcertified/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/uz-certified.gif\"></a><a href=\"https://www.ngmk.uz/vestnik/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/gvuz_rus.gif\"></a><a href=\"http://my.gov.uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/mini_baner_2.png\"></a><a href=\"http://gis.uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/banner_gis_uz.png\"></a></div></aside>", 1);
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Axborot xizmalari ");
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<aside class=\"text-gray-300 mt-20\"><div class=\"flex items-start mb-3\"><i class=\"fas fa-home text-2xl pt-2\"></i><p class=\"ml-3\"> O&#39;zbekiston Respublikasi, Navoiy viloyati, Navoiy sh., Navoiy ko&#39;chasi 21-uy </p></div><div class=\"flex items-start mb-3\"><i class=\"fas fa-phone text-2xl pt-2\"></i><p class=\"ml-3\"> +(99879) 227-29-16 <br> +(99879) 227-29-18 </p></div><div class=\"flex items-start mb-3\"><i class=\"fas fa-fax text-2xl pt-2\"></i><p class=\"ml-3\"> +(99879) 227-82-13 </p></div><div class=\"flex items-start mb-3\"><i class=\"fal fa-envelope text-2xl pt-2\"></i><p class=\"ml-4\"> info@fondnkmk.uz </p></div><div class=\"mt-10 flex flex-wrap\"><a href=\"http://www.gov.uz/uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/gov.gif\"></a><a href=\"http://www.uzinfocom.uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/dc.png\"></a><a href=\"http://www.lex.uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/lexuz.gif\"></a><a href=\"http://www.rudmet.ru/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/rudmet2.gif\"></a><a href=\"http://www.cert.uz/uzcertified/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/uz-certified.gif\"></a><a href=\"https://www.ngmk.uz/vestnik/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/gvuz_rus.gif\"></a><a href=\"http://my.gov.uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/mini_baner_2.png\"></a><a href=\"http://gis.uz/\" target=\"_blank\" class=\"w-1/3 mb-4\"><img class=\"w-24\" src=\"/images/banner_gis_uz.png\"></a></div></aside>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("aside", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: "/",
-    "class": "w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md mb-4"
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("header", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("aside", null, [_ctx.$store.state.user ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_router_link, {
+    key: 0,
+    to: "/admin",
+    "class": "w-full p-4 bg-green-900 bg-opacity-90 block shadow-md mb-4"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_3];
@@ -19885,8 +19870,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: "/about",
+  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/",
     "class": "w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md mb-4"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -19896,7 +19881,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     /* STABLE */
 
   }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: "/",
+    to: "/about",
     "class": "w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md mb-4"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -19945,7 +19930,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })]), _hoisted_10])]);
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/",
+    "class": "w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md mb-4"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_10];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), _hoisted_11])]);
 }
 
 /***/ }),
@@ -20032,48 +20027,68 @@ __webpack_require__.r(__webpack_exports__);
   component: function component() {
     return __webpack_require__.e(/*! import() */ "resources_js_pages_Home_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../pages/Home.vue */ "./resources/js/pages/Home.vue"));
   },
-  name: 'home'
+  name: 'home',
+  meta: {
+    header: true,
+    footer: false
+  }
 }, {
   path: '/news',
   component: function component() {
     return __webpack_require__.e(/*! import() */ "resources_js_pages_News_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../pages/News.vue */ "./resources/js/pages/News.vue"));
   },
-  name: 'news'
+  name: 'news',
+  meta: {
+    header: true,
+    footer: true
+  }
 }, {
   path: '/about',
   component: function component() {
     return __webpack_require__.e(/*! import() */ "resources_js_pages_About_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../pages/About.vue */ "./resources/js/pages/About.vue"));
   },
-  name: 'about'
-}, // {
-// 	path: '/settings',
-// 	component: () => import('../pages/Settings.vue'),
-// 	name: 'settings',
-//     meta: {
-// 		guard: 'auth'
-// 	},
-// },
-{
+  name: 'about',
+  meta: {
+    header: true,
+    footer: true
+  }
+}, {
+  path: '/admin',
+  component: function component() {
+    return __webpack_require__.e(/*! import() */ "resources_js_pages_admin_index_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../pages/admin/index.vue */ "./resources/js/pages/admin/index.vue"));
+  },
+  name: 'admin',
+  meta: {
+    guard: 'auth',
+    header: false,
+    footer: false
+  },
+  children: [{
+    path: '',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_pages_admin_main_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../pages/admin/main.vue */ "./resources/js/pages/admin/main.vue"));
+    }
+  }, {
+    path: 'news',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_pages_admin_News_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../pages/admin/News.vue */ "./resources/js/pages/admin/News.vue"));
+    }
+  }]
+}, {
   path: '/login',
   component: function component() {
     return __webpack_require__.e(/*! import() */ "resources_js_pages_Login_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../pages/Login.vue */ "./resources/js/pages/Login.vue"));
   },
   name: 'login',
   meta: {
-    guard: 'guest'
+    guard: 'guest',
+    header: true,
+    footer: true
   }
-} // {
-// 	path: '/register', 
-// 	component: () => import('../pages/Register.vue'),
-// 	meta: {
-// 		guard: 'guest'
-// 	}
-// },
-// {
-// 	path: '/:pathMatch(.*)*',
-// 	redirect: '/',
-// }
-]);
+}, {
+  path: '/:pathMatch(.*)*',
+  redirect: '/'
+}]);
 
 /***/ }),
 
@@ -20091,8 +20106,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm-bundler.js");
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -20104,10 +20117,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   state: function state() {
     return {
       user: null,
-      grid: null,
-      gridData: [],
-      context: false,
-      activeContext: null,
       scroll: false
     };
   },
@@ -20116,47 +20125,43 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       state.user = user;
     }
   },
-  actions: _defineProperty({
+  actions: {
     login: function login(_ref, data) {
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
-        var state, dispatch, login;
+        var state, dispatch, result;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 state = _ref.state, dispatch = _ref.dispatch;
                 _context.next = 3;
-                return axios.get('/sanctum/csrf-cookie', {
-                  baseURL: '/'
-                });
-
-              case 3:
-                _context.next = 5;
                 return axios.post('login', data);
 
-              case 5:
-                login = _context.sent;
+              case 3:
+                result = _context.sent;
 
-                if (!(login.status == 299)) {
-                  _context.next = 10;
+                if (!(result.status == 299)) {
+                  _context.next = 8;
                   break;
                 }
 
-                state.logined = login.data.message;
-                _context.next = 14;
+                state.logined = result.data.message;
+                _context.next = 13;
                 break;
 
-              case 10:
+              case 8:
+                localStorage.setItem('token', "".concat(result.data.type, " ").concat(result.data.token)); // local
+
                 state.logined = null;
-                _context.next = 13;
+                _context.next = 12;
                 return dispatch('getUser');
 
-              case 13:
+              case 12:
                 router.push({
-                  name: 'home'
+                  name: 'admin'
                 });
 
-              case 14:
+              case 13:
               case "end":
                 return _context.stop();
             }
@@ -20177,7 +20182,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 3:
                 result = _context2.sent;
-                if (result.status == 200) dispatch('login', props);
+
+                if (result.status == 200) {
+                  localStorage.setItem('token', "".concat(result.data.type, " ").concat(result.data.token)); // local
+
+                  dispatch('login', props);
+                }
 
               case 5:
               case "end":
@@ -20187,45 +20197,23 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         }, _callee2);
       }))();
     },
-    getUser: function getUser(_ref3) {
+    logout: function logout(_ref3) {
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
-        var commit;
+        var commit, data;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
                 commit = _ref3.commit;
                 _context3.next = 3;
-                return axios.get('user').then(function (res) {
-                  console.log(res);
-                  commit('setUser', res.data);
-                })["catch"](function () {
-                  console.clear();
-                });
-
-              case 3:
-              case "end":
-                return _context3.stop();
-            }
-          }
-        }, _callee3);
-      }))();
-    },
-    logout: function logout(_ref4) {
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4() {
-        var commit, data;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
-          while (1) {
-            switch (_context4.prev = _context4.next) {
-              case 0:
-                commit = _ref4.commit;
-                _context4.next = 3;
                 return axios.get('logout');
 
               case 3:
-                data = _context4.sent;
+                data = _context3.sent;
 
                 if (data.status == 200) {
+                  axios.defaults.headers.common['Authorization'] = null;
+                  localStorage.removeItem('token');
                   commit('setUser', null);
                   router.push({
                     name: 'login'
@@ -20234,70 +20222,37 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
               case 5:
               case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3);
+      }))();
+    },
+    getUser: function getUser(_ref4) {
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee4() {
+        var commit;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                commit = _ref4.commit;
+                axios.defaults.headers.common['Authorization'] = localStorage.getItem('token');
+                _context4.next = 4;
+                return axios.get('user').then(function (res) {
+                  commit('setUser', res.data);
+                })["catch"](function () {
+                  console.clear();
+                });
+
+              case 4:
+              case "end":
                 return _context4.stop();
             }
           }
         }, _callee4);
       }))();
-    },
-    delDeptor: function delDeptor(_ref5, payload) {
-      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee5() {
-        var state, data;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee5$(_context5) {
-          while (1) {
-            switch (_context5.prev = _context5.next) {
-              case 0:
-                state = _ref5.state;
-                _context5.next = 3;
-                return axios.post('/debtors/delete', payload);
-
-              case 3:
-                data = _context5.sent;
-
-                if (data.status = 200) {
-                  state.grid.applyTransaction({
-                    remove: [payload]
-                  });
-                  state.context = false;
-                }
-
-              case 5:
-              case "end":
-                return _context5.stop();
-            }
-          }
-        }, _callee5);
-      }))();
     }
-  }, "delDeptor", function delDeptor(_ref6, payload) {
-    return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee6() {
-      var state, data;
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee6$(_context6) {
-        while (1) {
-          switch (_context6.prev = _context6.next) {
-            case 0:
-              state = _ref6.state;
-              _context6.next = 3;
-              return axios.post('/debtors/recover', payload);
-
-            case 3:
-              data = _context6.sent;
-
-              if (data.status = 200) {
-                state.grid.applyTransaction({
-                  remove: [payload]
-                });
-                state.context = false;
-              }
-
-            case 5:
-            case "end":
-              return _context6.stop();
-          }
-        }
-      }, _callee6);
-    }))();
-  })
+  }
 }));
 
 /***/ }),
@@ -27283,7 +27238,7 @@ module.exports = JSON.parse('{"_args":[["axios@0.21.4","D:\\\\media\\\\openserve
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_pages_Home_vue":1,"resources_js_pages_News_vue":1,"resources_js_pages_About_vue":1,"resources_js_pages_Login_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_pages_Home_vue":1,"resources_js_pages_News_vue":1,"resources_js_pages_About_vue":1,"resources_js_pages_admin_index_vue":1,"resources_js_pages_admin_main_vue":1,"resources_js_pages_admin_News_vue":1,"resources_js_pages_Login_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

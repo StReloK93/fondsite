@@ -84,7 +84,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     effect: 'creative',
     mousewheel: true,
     speed: 1000,
-    onTransitionEnd: $setup.eventEnd
+    onTransitionEnd: $setup.eventEnd,
+    "class": "h-screen"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["SwiperSlide"], {

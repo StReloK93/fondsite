@@ -25,8 +25,8 @@ class UserController extends Controller
 
         $token = $this->guard()->user()->createToken('auth-token')->plainTextToken;
         return response()->json([
-            'access_token' => $token,
-            'token_type' => 'Bearer',
+            'token' => $token,
+            'type' => 'Bearer',
         ], 200);
     }
 

@@ -56,7 +56,7 @@ var _hoisted_1 = {
   "class": "flex flex-col h-full"
 };
 var _hoisted_2 = {
-  "class": "flex-grow flex items-center justify-center"
+  "class": "flex items-center justify-center h-full fixed w-full top-0 left-0 z-50"
 };
 
 var _hoisted_3 = /*#__PURE__*/_withScopeId(function () {

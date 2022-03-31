@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Robotoreg';
+    src:  url('/css/font.ttf') format('ttf');
+}
+
+#app{
+    font-family: system-ui,
+    -apple-system, /* Firefox supports this but not yet `system-ui` */
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji'!important;
+}
+
 .flex-center{
     display: flex;
     justify-content: center;
@@ -21,4 +38,79 @@
 .bg-image-3{
     background-image: url('/images/3.jpg');
     background-repeat: no-repeat;
+}
+
+
+.codex-editor{
+    color: #414141;
+}
+h1.ce-header{
+    font-size: 2em;
+}
+
+h2.ce-header{
+    font-size: 1.5em;
+}
+
+h3.ce-header{
+    font-size: 1.17em;
+}
+
+
+h4.ce-header{
+    font-size: 15px;
+}
+
+h5.ce-header{
+    font-size: 0.83em;
+}
+
+h6.ce-header{
+    font-size:  0.67em;
+}
+
+
+.ce-paragraph .cdx-block{
+    line-height: 1.6em;
+    outline: none;
+    padding: .4em 0;
+}
+
+.ce-header{
+    color: #414141;
+    padding: 0.6em 0 3px;
+    margin: 0;
+    line-height: 1.25em;
+    outline: none;
+    letter-spacing: -.03em;
+    font-weight: bolder;
+}
+
+.ce-block__content{
+    max-width: 100%;
+    /* padding: 0 5px!important; */
+}
+
+.ce-toolbar__content{
+    max-width: 100%!important;
+    padding: 0 15px!important;
+}
+.inline-code{
+    background: rgba(250, 239, 240, 0.78);
+    color: #b44437;
+    padding: 3px 4px;
+    border-radius: 5px;
+    margin: 0 1px;
+    font-family: inherit;
+    font-size: 0.86em;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.ce-toolbar{
+    padding: 0px 6px!important;
+}
+
+.image-tool__caption{
+    display: none!important;
 }
