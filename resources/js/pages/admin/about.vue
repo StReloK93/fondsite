@@ -22,10 +22,10 @@ async function getData(){
 }
 
 getData().then(() => {
+    var data = pageInfo.data.description == "" ? "" : JSON.parse(pageInfo.data.description)
     const editor = new EditorJS({
         holder: 'editor',
-        data: JSON.parse(pageInfo.data.description),
-        inlineToolbar: ['link', 'bold', 'italic'],
+        data: data,
         tools: {
             list: {
                 class: List,
@@ -35,7 +35,6 @@ getData().then(() => {
                 }
             },
             header: Header,
-            // Link,
             delimiter: Delimiter,
             image: {
                 class: ImageTool,

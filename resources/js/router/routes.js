@@ -18,6 +18,42 @@ export default [
 		}
 	},
 	{
+		path: '/services',
+		component: () => import('../pages/Services.vue'),
+		name: 'services',
+		meta: {
+			header: true,
+			footer: true
+		}
+	},
+	{
+		path: '/contacts',
+		component: () => import('../pages/Contacts.vue'),
+		name: 'contacts',
+		meta: {
+			header: true,
+			footer: true
+		}
+	},
+	{
+		path: '/printed',
+		component: () => import('../pages/Printed.vue'),
+		name: 'printed',
+		meta: {
+			header: true,
+			footer: true
+		}
+	},
+	{
+		path: '/information',
+		component: () => import('../pages/Information.vue'),
+		name: 'information',
+		meta: {
+			header: true,
+			footer: true
+		}
+	},
+	{
 		path: '/about',
 		component: () => import('../pages/About.vue'),
 		name: 'about',
@@ -59,6 +95,10 @@ export default [
 			{
 				path: 'contacts',
 				component: () => import('../pages/admin/contacts.vue'),
+			},
+			{
+				path: 'addnews',
+				component: () => import('../pages/admin/addnews.vue'),
 			},
 		 ],
 	},

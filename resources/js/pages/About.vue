@@ -82,11 +82,11 @@ async function getData(){
 
 
 getData().then(() => {
-    console.log(pageInfo.data.description);
+    var data = pageInfo.data.description == "" ? "" : JSON.parse(pageInfo.data.description)
     editor = new EditorJS({
         holder: 'editor',
         readOnly: true,
-        data: JSON.parse(pageInfo.data.description),
+        data: data,
         tools: {
             list: {
                 class: List,

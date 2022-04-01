@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -18,8 +19,16 @@ use App\Http\Controllers\PagesController;
 
 
 Route::post('/login', [UserController::class, 'login']);
+
+
 Route::post('/uploadimage', [ImageController::class, 'upload']);
+
+
 Route::get('/pages/{page}', [PagesController::class, 'page']);
+
+
+Route::get('/post/all', [PostController::class, 'getAll']);
+Route::post('/post/add', [PostController::class, 'getAdd']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', [UserController::class, 'getUser']);

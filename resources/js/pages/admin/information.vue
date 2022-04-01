@@ -1,7 +1,7 @@
 <template>
     <section>
         <h3 class="text-2xl text-gray-700 font-medium mb-4">
-            Biz Haqimizda
+            Axborot xizmatlari
         </h3>
         <div class="pb-10" id="editor">
 
@@ -18,13 +18,14 @@ import Delimiter  from '@editorjs/delimiter'
 var pageInfo = null
 
 async function getData(){
-    pageInfo = await axios.get('/pages/about')
+    pageInfo = await axios.get('/pages/information')
 }
 
 getData().then(() => {
+    var data = pageInfo.data.description == "" ? "" : JSON.parse(pageInfo.data.description)
     const editor = new EditorJS({
         holder: 'editor',
-        data: JSON.parse(pageInfo.data.description),
+        data: data,
         inlineToolbar: ['link', 'bold', 'italic'],
         tools: {
             list: {
@@ -49,7 +50,7 @@ getData().then(() => {
         },
         onChange: (api, event) => {
             editor.save().then((outputData) => {
-                axios.post('/pages/about', {description: outputData}).then((res) => {
+                axios.post('/pages/information', {description: outputData}).then((res) => {
                     console.log(res.data);
                 })
             })

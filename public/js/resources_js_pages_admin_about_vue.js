@@ -180,10 +180,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
 
     getData().then(function () {
+      var data = pageInfo.data.description == "" ? "" : JSON.parse(pageInfo.data.description);
       var editor = new (_editorjs_editorjs__WEBPACK_IMPORTED_MODULE_1___default())({
         holder: 'editor',
-        data: JSON.parse(pageInfo.data.description),
-        inlineToolbar: ['link', 'bold', 'italic'],
+        data: data,
         tools: {
           list: {
             "class": (_editorjs_list__WEBPACK_IMPORTED_MODULE_2___default()),
@@ -193,7 +193,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             }
           },
           header: (_editorjs_header__WEBPACK_IMPORTED_MODULE_3___default()),
-          // Link,
           delimiter: (_editorjs_delimiter__WEBPACK_IMPORTED_MODULE_6___default()),
           image: {
             "class": (_editorjs_image__WEBPACK_IMPORTED_MODULE_4___default()),
@@ -284,13 +283,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _about_vue_vue_type_template_id_cd36d118__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./about.vue?vue&type=template&id=cd36d118 */ "./resources/js/pages/admin/about.vue?vue&type=template&id=cd36d118");
 /* harmony import */ var _about_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./about.vue?vue&type=script&setup=true&lang=js */ "./resources/js/pages/admin/about.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_openserver_domains_example_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var D_media_openserver_domains_fondsite_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_openserver_domains_example_app_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_about_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_about_vue_vue_type_template_id_cd36d118__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/pages/admin/about.vue"]])
+const __exports__ = /*#__PURE__*/(0,D_media_openserver_domains_fondsite_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_about_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_about_vue_vue_type_template_id_cd36d118__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/pages/admin/about.vue"]])
 /* hot reload */
 if (false) {}
 

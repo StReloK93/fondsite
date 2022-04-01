@@ -64,3 +64,11 @@ body{
 .h-custom{
     height: 500px;
 }
+
+.admin .ce-paragraph.cdx-block{
+    background: #eee;
+}
+
+input:focus{
+    outline: none;
+}

@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // User::create([
-        //     'name' => 'Aziz',
-        //     'phone' => 'strelok',
-        //     'password' => Hash::make('strelok'),
-        // ]);
+        User::create([
+            'name' => 'Aziz',
+            'phone' => 'strelok',
+            'password' => Hash::make('strelok'),
+        ]);
 
         Pages::create([
             'name' => 'about',

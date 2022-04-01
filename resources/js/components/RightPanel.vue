@@ -8,19 +8,19 @@
             <router-link to="/about" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
                Biz haqimizda
             </router-link>
-            <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
+            <router-link to="/services" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
                Xizmatlar
             </router-link>
-            <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
+            <router-link to="/information" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
                Axborot xizmatlari
             </router-link>
-            <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
+            <router-link to="/printed" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
                Matbuot xizmati
             </router-link>
-            <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
+            <router-link to="/news" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
                Yangiliklar
             </router-link>
-            <router-link to="/" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
+            <router-link to="/contacts" class="w-full p-4 bg-gray-900 bg-opacity-90 block shadow-md  mb-4">
                Aloqalar
             </router-link>
          </aside>
