@@ -14,6 +14,7 @@
         "@editorjs/header": "^2.6.2",
         "@editorjs/list": "^1.7.0",
         "laravel-mix": "^6.0.39",
+        "sweetalert2": "^11.4.8",
         "swiper": "^8.0.7",
         "vue-class-component": "^8.0.0-rc.1",
         "vue-router": "^4.0.12",

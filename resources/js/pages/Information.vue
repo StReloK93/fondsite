@@ -18,7 +18,7 @@
                            Yangilandi 20.11.2022 <i class="fal fa-calendar-alt"></i>
                         </span>
                     </div> -->
-                    <div id="editor">
+                    <div id="editor" class="viewer">
 
                     </div>
                 </aside>

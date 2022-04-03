@@ -1,6 +1,6 @@
 <template>
     <section>
-        <main  :style="{ backgroundImage: 'url(/images/62.jpg)'}" class="h-custom bg-cover bg-center">
+        <main  :style="{ backgroundImage: 'url(/images/contacts.jpg)'}" class="h-custom bg-cover bg-center">
             <div class="h-full w-full flex-center bg-black bg-opacity-20">
                 <h3 class="text-white text-5xl font-bold">
                     Yangiliklar
@@ -9,22 +9,33 @@
         </main>
         <main class="container mx-auto mt-16 flex">
             <div class="w-3/4 pr-3">
-                <aside class="shadow-sm px-4 pt-2 bg-white">
-                    <!-- <div class="flex justify-between mb-2">
-                        <span class="bg-gray-600 text-gray-200 px-2 py-1 shadow">
-                           Yaratildi  20.11.2022 <i class="fal fa-calendar-alt"></i>
-                        </span>
-                        <span class="bg-gray-600 text-gray-200 px-2 py-1 shadow">
-                           Yangilandi 20.11.2022 <i class="fal fa-calendar-alt"></i>
-                        </span>
-                    </div> -->
-                    <div id="editor">
+                <aside class="flex flex-wrap">
+                    <div  v-for="post in allPosts" :key="post.id" class="w-1/4 px-2 mb-4">
+                        <main class="bg-white overflow-hidden rounded shadow">
+                            <img :src="'/images/'+post.img" alt="post" class="h-44 object-cover w-full">
+                            <footer class="p-3 pt-2">
+                                <h3 class="text-xl font-medium mb-1">
+                                    {{post.title}}
+                                </h3>
+                                <p class="text-gray-500">
+                                    {{post.desc}}
+                                </p>
+                                <div class="text-right mt-1 flex justify-between items-center">
+                                    <span class="text-sm text-gray-400">
+                                        <i class="fal fa-calendar-alt text-blue-600"></i> {{post.created}}
+                                    </span>
+                                    <router-link :to="{name: 'post' , params: {id: post.id}}" class="px-4 rounded-sm border border-indigo-600 text-indigo-600 font-medium shadow hover:bg-indigo-600 hover:text-white">
+                                        Batafsil
+                                    </router-link>
+                                </div>
 
+                            </footer>
+                        </main>
                     </div>
                 </aside>
             </div>
             <div class="w-1/4 pl-3">
-                <aside class="shadow-sm p-4 bg-white">
+                <aside class="shadow-sm p-4 bg-white rounded">
                     <h3 class="mb-4 text-2xl font-bold text-gray-700">
                         So'ngi yangiliklar
                     </h3>
@@ -67,57 +78,26 @@
     </section>
 </template>
 <script setup>
-import {onUnmounted} from 'vue'
-import EditorJS from '@editorjs/editorjs';
-import List from '@editorjs/list'; 
-import Header from '@editorjs/header'
-import ImageTool from '@editorjs/image'
-import Quote  from '@editorjs/quote'
-import Delimiter  from '@editorjs/delimiter'
-var pageInfo = null
-var editor = null
+import { ref } from 'vue'
+
+const allPosts = ref({})
 async function getData(){
-    pageInfo = await axios.get('/pages/contacts')
+    const {data} = await axios.get('/post/all')
+    
+
+    data.data.forEach((post,index) => {
+        var description = JSON.parse(post.description)
+        var block = description.blocks
+        const text = block.find((text) => text.type == 'paragraph')
+
+       
+        if(text != undefined)  data.data[index].desc = text.data.text.substr(0, 90) + ' ...';
+        else data.data[index].desc = ""
+
+    });
+
+    allPosts.value = data.data
 }
 
-
-getData().then(() => {
-    var data = pageInfo.data.description == "" ? "" : JSON.parse(pageInfo.data.description)
-    editor = new EditorJS({
-        holder: 'editor',
-        readOnly: true,
-        data: data,
-        tools: {
-            list: {
-                class: List,
-                inlineToolbar: true,
-                config: {
-                    defaultStyle: 'unordered'
-                }
-            },
-            header: Header,
-            delimiter: Delimiter,
-            image: {
-                class: ImageTool,
-                config: {
-                    endpoints: {
-                        byFile: '/api/uploadimage', // Your backend file uploader endpoint
-                    }
-                }
-            },
-            quote: Quote 
-        },
-        onChange: (api, event) => {
-            editor.save().then((outputData) => {
-                axios.post('/pages/contacts', {description: outputData}).then((res) => {
-                    console.log(res.data);
-                })
-            })
-        }
-    });
-})
-
-onUnmounted(() => {
-    editor.destroy();
-})
+getData()
 </script>

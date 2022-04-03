@@ -3,18 +3,18 @@
       <h3 class="text-2xl font-medium mb-4">
          Post qo'shish
       </h3>
-      <form @submit.prevent="publish" class="w-1/2">
+      <form @submit.prevent="publish" class="w-2/3">
          <div class="mb-2">
             <label for="titles" class="block text-gray-500 text-sm mb-2">Sarlavha</label>
             <input id="titles" type="text" v-model="title" class="bg-transparent border-b w-full" placeholder="Sarlavha" required>
          </div>
          <div class="mb-2 relative">
-            <label for="images" class="block text-gray-500 text-sm mb-2 relative z-50">
+            <label for="images" class="block text-gray-500 text-sm mb-2 relative z-50 p-1">
                <img src='/images/default.jpg' ref="preview" >
             </label>
-            <input id="images" class="absolute top-0 left-0 z-0" type="file" @input="imgChange" ref="images"  required>
+            <input id="images" class="absolute top-5 left-5 z-0" type="file" @input="imgChange" ref="images"  required>
          </div>
-         <div id="editor">
+         <div id="editor" class="redactor">
 
          </div>
          <div>

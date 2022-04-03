@@ -72,3 +72,11 @@ body{
 input:focus{
     outline: none;
 }
+
+.viewer .codex-editor__redactor{
+    padding-bottom: 0px!important;
+}
+
+.redactor .codex-editor__redactor{
+    padding-bottom: 120px!important;
+}

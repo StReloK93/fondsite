@@ -28,7 +28,10 @@ Route::get('/pages/{page}', [PagesController::class, 'page']);
 
 
 Route::get('/post/all', [PostController::class, 'getAll']);
-Route::post('/post/add', [PostController::class, 'getAdd']);
+Route::post('/post/add', [PostController::class, 'addPost']);
+Route::get('/postget/{id}', [PostController::class, 'getPost']);
+Route::get('/postdelete/{id}', [PostController::class, 'deletePost']);
+Route::post('/postedit/{id}', [PostController::class, 'editPost']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', [UserController::class, 'getUser']);

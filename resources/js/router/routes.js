@@ -18,6 +18,15 @@ export default [
 		}
 	},
 	{
+		path: '/post/:id',
+		component: () => import('../pages/Post.vue'),
+		name: 'post',
+		meta: {
+			header: true,
+			footer: true
+		}
+	},
+	{
 		path: '/services',
 		component: () => import('../pages/Services.vue'),
 		name: 'services',
@@ -99,6 +108,11 @@ export default [
 			{
 				path: 'addnews',
 				component: () => import('../pages/admin/addnews.vue'),
+			},
+			{
+				path: 'postedit/:id',
+				name: 'postedit',
+				component: () => import('../pages/admin/postEdit.vue'),
 			},
 		 ],
 	},

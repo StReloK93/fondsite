@@ -10,15 +10,7 @@
         <main class="container mx-auto mt-16 flex">
             <div class="w-3/4 pr-3">
                 <aside class="shadow-sm px-4 pt-2 bg-white">
-                    <!-- <div class="flex justify-between mb-2">
-                        <span class="bg-gray-600 text-gray-200 px-2 py-1 shadow">
-                           Yaratildi  20.11.2022 <i class="fal fa-calendar-alt"></i>
-                        </span>
-                        <span class="bg-gray-600 text-gray-200 px-2 py-1 shadow">
-                           Yangilandi 20.11.2022 <i class="fal fa-calendar-alt"></i>
-                        </span>
-                    </div> -->
-                    <div id="editor">
+                    <div id="editor" class="viewer">
 
                     </div>
                 </aside>
