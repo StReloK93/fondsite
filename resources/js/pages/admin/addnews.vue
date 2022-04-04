@@ -56,6 +56,7 @@ async function publish(){
    formdata.append('description' , JSON.stringify(data))
 
    const information = await axios.post('/post/add', formdata)
+   if(information.status == 201) router.push({ path: '/admin' })
 }
 
 onMounted(() => {

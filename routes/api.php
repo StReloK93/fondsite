@@ -31,6 +31,9 @@ Route::get('/post/all', [PostController::class, 'getAll']);
 Route::post('/post/add', [PostController::class, 'addPost']);
 Route::get('/postget/{id}', [PostController::class, 'getPost']);
 Route::get('/postdelete/{id}', [PostController::class, 'deletePost']);
+
+Route::get('/postlast', [PostController::class, 'lastPosts']);
+
 Route::post('/postedit/{id}', [PostController::class, 'editPost']);
 
 Route::middleware('auth:sanctum')->group(function () {

@@ -10,7 +10,7 @@ use Str;
 class PostController extends Controller
 {
     public function getAll(){
-        $allPosts = Post::paginate(12);
+        $allPosts = Post::orderBy('id', 'desc')->paginate(12);
 
         foreach ($allPosts as $key => $value) {
             $value->created =  Carbon::parse($value->created_at)->format('Y-m-d');
@@ -21,7 +21,6 @@ class PostController extends Controller
 
     public function addPost(Request $req){
         $now = Carbon::now()->format('YmdHis');
-
 
         $post = new Post;
         $post->title = $req->title;
@@ -56,4 +55,16 @@ class PostController extends Controller
         return Post::where('id', $id)->delete();
     }
 
+
+    public function lastPosts(){
+        $posts = Post::orderBy('id', 'desc')->take(3)->get();
+
+        foreach ($posts as $key => $value) {
+            $value->created =  Carbon::parse($value->created_at)->format('Y-m-d');
+            $value->title =  Str::limit($value->title, 18, $end=' ...');
+        }
+        return $posts;
+    }
 }
+
+

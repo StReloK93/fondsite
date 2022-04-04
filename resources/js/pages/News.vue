@@ -33,70 +33,48 @@
                         </main>
                     </div>
                 </aside>
+                <main class="pagination flex">
+                    <div v-for="link in pagination.links" :key="link">
+                        <button @click="getData(link.url)" v-if="link.label == 'pagination.previous'" :class="{'bg-gray-200 cursor-not-allowed': link.url == null}" class="px-3 py-1 bg-white mx-2 shadow-sm">
+                            <i class="fal fa-chevron-left"></i>
+                        </button>
+                        <button @click="getData(link.url)" v-else-if="link.label == 'pagination.next'" :class="{'bg-gray-200 cursor-not-allowed': link.url == null}" class="px-3 py-1 bg-white mx-2 shadow-sm">
+                            <i class="fal fa-chevron-right"></i>
+                        </button>
+                        <button v-else  @click="getData(link.url)" class="px-3 py-1 bg-white mx-2 shadow-sm" :class="{'bg-blue-500 text-white': link.active}">
+                            {{link.label}}
+                        </button>
+
+                    </div>
+                </main>
             </div>
-            <div class="w-1/4 pl-3">
-                <aside class="shadow-sm p-4 bg-white rounded">
-                    <h3 class="mb-4 text-2xl font-bold text-gray-700">
-                        So'ngi yangiliklar
-                    </h3>
-                    <main class="flex mb-4">
-                        <div class="w-1/3">
-                            <img src="/images/1.jpg" class="w-24 h-24 object-cover shadow-md">
-                        </div>
-                        <div class="w-2/3 flex justify-between flex-col">
-                            <p class="text-gray-600 leading-tight">Lorem ipsum dolor, sit amet consectetur adipisicing elit. ipsum dolor, sit amet</p>
-                            <span class="text-blue-800">
-                                15.03.2022
-                            </span>
-                        </div>
-                    </main>
-                    <main class="flex mb-4">
-                        <div class="w-1/3">
-                            <img src="/images/1.jpg" class="w-24 h-24 object-cover shadow-md">
-                        </div>
-                        <div class="w-2/3 flex justify-between flex-col">
-                            <p class="text-gray-600 leading-tight">Lorem ipsum dolor, sit amet consectetur adipisicing elit. ipsum dolor, sit amet</p>
-                            <span class="text-blue-800">
-                                15.03.2022
-                            </span>
-                        </div>
-                    </main>
-                    <main class="flex">
-                        <div class="w-1/3">
-                            <img src="/images/1.jpg" class="w-24 h-24 object-cover shadow-md">
-                        </div>
-                        <div class="w-2/3 flex justify-between flex-col">
-                            <p class="text-gray-600 leading-tight">Lorem ipsum dolor, sit amet consectetur adipisicing elit. ipsum dolor, sit amet</p>
-                            <span class="text-blue-800">
-                                15.03.2022
-                            </span>
-                        </div>
-                    </main>
-                </aside>
-            </div>
+            <LastPosts/>
         </main>
     </section>
 </template>
 <script setup>
 import { ref } from 'vue'
+import LastPosts from '../components/lastPost.vue'
+
 
 const allPosts = ref({})
-async function getData(){
-    const {data} = await axios.get('/post/all')
-    
+const pagination = ref({})
+async function getData(url = '/post/all'){
+   if(url == null) return 
+   const {data} = await axios.get(url)
+   pagination.value = data
+   data.data.forEach((post,index) => {
+      var description = JSON.parse(post.description)
+      var block = description.blocks
+      const text = block.find((text) => text.type == 'paragraph')
 
-    data.data.forEach((post,index) => {
-        var description = JSON.parse(post.description)
-        var block = description.blocks
-        const text = block.find((text) => text.type == 'paragraph')
+      
+      if(text != undefined)  data.data[index].desc = text.data.text.substr(0, 50) + ' ...';
+      else data.data[index].desc = ""
 
-       
-        if(text != undefined)  data.data[index].desc = text.data.text.substr(0, 90) + ' ...';
-        else data.data[index].desc = ""
+   });
 
-    });
-
-    allPosts.value = data.data
+   allPosts.value = data.data
 }
 
 getData()

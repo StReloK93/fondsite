@@ -6,9 +6,9 @@
                     <h3 class="text-xl font-bold mb-3">
                         NKMK Jamg'armasi DM
                     </h3>
-                    <p class="text-gray-600">
+                    <!-- <p class="text-gray-600">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis magnam non quo vel dolor iusto repudiandae, perferendis voluptatibus placeat nam molestiae laborum dolorum commodi ipsa, est delectus. Eius, qui praesentium!
-                    </p>
+                    </p> -->
                 </div>
                 <div class="w-1/3  px-4">
                 

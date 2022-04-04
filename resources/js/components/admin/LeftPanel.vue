@@ -29,9 +29,23 @@
          </router-link>
       </main>
       <main>
-         <button @click="$store.dispatch('logout')" class="text-white flex items-center w-full py-2 justify-center bg-red-500 font-medium hover:bg-red-700">
+         <button @click="sweetAlert" class="text-white flex items-center w-full py-2 justify-center bg-red-500 font-medium hover:bg-red-700">
             Chiqish <i class="fal fa-sign-out-alt ml-4 relative" style="top: 2px"></i>
          </button>
       </main>
    </div>
 </template>
+<script setup>
+function sweetAlert(){
+   Swal.fire({
+      title: "Aniq chiqmoqchimisz?",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Ha <i class="fal ml-2 fa-check"></i>',
+      cancelButtonText: 'yoq <i class="fal ml-2 fa-times"></i>',
+      reverseButtons: true
+   }).then(async (result) => {
+      if (result.isConfirmed) store.dispatch('logout')
+   })
+}
+</script>
