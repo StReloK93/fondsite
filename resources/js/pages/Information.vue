@@ -1,7 +1,8 @@
 <template>
     <section>
-        <main  :style="{ backgroundImage: 'url(/images/info.jpg)'}" class="h-custom bg-cover bg-center">
-            <div class="h-full w-full flex-center bg-black bg-opacity-20">
+        <main class="relative">
+            <img src="/images/info.jpg" class="w-full">
+            <div class="flex-center bg-black bg-opacity-20 absolute top-0 left-0 w-full h-full">
                 <h3 class="text-white text-5xl font-bold">
                     Axborot xizmatlari
                 </h3>

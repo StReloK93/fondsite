@@ -1,7 +1,8 @@
 <template>
     <section>
-        <main  :style="{ backgroundImage: 'url(/images/3.jpg)'}" class="h-custom bg-cover bg-center">
-            <div class="h-full w-full flex-center bg-black bg-opacity-20">
+        <main class="relative">
+            <img src="/images/3.jpg" class="w-full">
+            <div class="flex-center bg-black bg-opacity-20 absolute top-0 left-0 w-full h-full">
                 <h3 class="text-white text-5xl font-bold">
                     Matbuot xizmati
                 </h3>
@@ -10,17 +11,7 @@
         <main class="container mx-auto mt-16 flex">
             <div class="w-3/4 pr-3">
                 <aside class="shadow-sm px-4 pt-2 bg-white">
-                    <!-- <div class="flex justify-between mb-2">
-                        <span class="bg-gray-600 text-gray-200 px-2 py-1 shadow">
-                           Yaratildi  20.11.2022 <i class="fal fa-calendar-alt"></i>
-                        </span>
-                        <span class="bg-gray-600 text-gray-200 px-2 py-1 shadow">
-                           Yangilandi 20.11.2022 <i class="fal fa-calendar-alt"></i>
-                        </span>
-                    </div> -->
-                    <div id="editor" class="viewer">
-
-                    </div>
+                    <div id="editor" class="viewer"></div>
                 </aside>
             </div>
             <LastPosts/>
@@ -70,13 +61,6 @@ getData().then(() => {
                 }
             },
             quote: Quote 
-        },
-        onChange: (api, event) => {
-            editor.save().then((outputData) => {
-                axios.post('/pages/printed', {description: outputData}).then((res) => {
-                    console.log(res.data);
-                })
-            })
         }
     });
 })
