@@ -3,19 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Pages;
+use DB;
 class PagesController extends Controller
 {
-    public function page($page){
-        return Pages::where('name' , $page)->first();
+    public function home(){
+        return view('pages.home');
     }
 
 
-    public function pageEdit($page, Request $req){
-        $page = Pages::where('name' , $page)->first();
+    public function rahbariyat($id){
+        $peoples = DB::table('rahbariyat')->get();
+        return view('pages.rahbariyat' , compact('peoples','id'));
+    }
 
-        $page->description = $req->description;
-        $page->save();
-        return $page;
+    public function ustav(){
+        return view('pages.ustav');
     }
 }
